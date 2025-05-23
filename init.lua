@@ -2,7 +2,7 @@ require("config.lazy")
 local global = vim.g
 local opt = vim.o
 
--- EDITOR SETTINGS -- 
+-- EDITOR SETTINGS --
 opt.number = true -- print the line number in front of each line
 opt.relativenumber = true -- show the line number relative to current line on other lines
 opt.clipboard = "unnamedplus" -- uses the clipboard register for all operations except yank.
@@ -24,13 +24,10 @@ opt.splitright = true
 opt.splitbelow = true
 opt.termguicolors = true
 
-
--- kEYBINDINGS -- 
+-- kEYBINDINGS --
 global.mapleader = " "
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>c", ":bd<CR>")
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
-vim.keymap.set("n", "<leader>bp", ":bprev<CR>")
+vim.keymap.set("n", "<leader>c", ":Bdelete<CR>")
 
 -- require'lspconfig'.pyright.setup{}
 -- require'lspconfig'.ruff.setup{}
